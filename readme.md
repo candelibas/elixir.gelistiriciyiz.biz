@@ -38,6 +38,7 @@ author:
     email: "E-POSTA"
     link: "LİNK"
     bio: "1 SATIR BİO"
+    twitter: "twitter_username"
 ```
 
 **published: false**
@@ -150,6 +151,7 @@ site:
     email: "E-POSTA"
     link: "LİNK"
     bio: "1 SATIR BİO"
+    twitter: "twitter_username"
 ```
 
 ## config_custom.yaml
@@ -164,6 +166,7 @@ main_author:
   email: "adsoyad@domain.com"
   link: "http://ugur.ozyilmazel.com"
   bio: "Yazılım Geliştiricisi"
+  twitter: "twitter_username"
 ```
 
 ## PULL REQUEST ile katkı
