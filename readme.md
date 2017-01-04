@@ -1,6 +1,6 @@
-# swift.gelistiriciyiz.biz
+# elixir.gelistiriciyiz.biz
 
-[http://swift.gelistiriciyiz.biz][1] sitesinin
+[http://elixir.gelistiriciyiz.biz][1] sitesinin
 kaynak kodu. [webBox.io’nun][2] [Middleman][3] template / statik
 sayfa üreticisi çatısı üzerine üzerine [jekyll-incorporated][4]
 temasının modifiyesi ile yapılmıştır.
@@ -186,7 +186,7 @@ Bu proje MIT lisansıyla lisanslanmıştır.
 
 ## Katkı Yapın
 
-1. `fork` yapın ( [tıkla](https://github.com/gelistiriciyiz-biz/swift.gelistiriciyiz.biz/fork) )
+1. `fork` yapın ( [tıkla](https://github.com/gelistiriciyiz-biz/elixir.gelistiriciyiz.biz/fork) )
 2. Kendi `branch`’inizi yapın (`git checkout -b benim-makalem`)
 3. Yaptıklarınızı `commit` edin (`git commit -am 'Yeni makale'`)
 4. `branch`’i `push` edin (`git push origin benim-makalem`)
@@ -194,7 +194,7 @@ Bu proje MIT lisansıyla lisanslanmıştır.
 
 
 
-[1]: http://swift.gelistiriciyiz.biz
+[1]: http://elixir.gelistiriciyiz.biz
 [2]: https://github.com/webBoxio/middleman-boilerplate-template
 [3]: https://middlemanapp.com/
 [4]: https://github.com/kippt/jekyll-incorporated
