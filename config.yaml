@@ -1,0 +1,23 @@
+site:
+  production_url: "http://elixir.gelistiriciyiz.biz"
+  title: "Elixir Püf Noktaları"
+  subtitle: "Elixir programlama dili"
+  description: "Elixir ile ilgili Türkçe püf noktaları"
+  logo: "logo.png"
+  cover_image: "cover.jpg"
+  social:
+    # twitter: "elixir_tips_tr"
+    google_analytics: "UA-6463685-50"
+    disqus: "elixir-gelistiriciyiz-biz"
+  company:
+    name: "Geliştiriciyiz.biz"
+    url: "http://gelistiriciyiz.biz/"
+  product:
+    name: "elixir.gelistiriciyiz.biz"
+    url: "http://elixir.gelistiriciyiz.biz/"
+  main_author:
+    name: "Full Name"
+    email: "email@example.com"
+    link: "http://example.com"
+    bio: "Title"
+    twitter: "twitter_username"
