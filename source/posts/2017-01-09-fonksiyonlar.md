@@ -2,6 +2,8 @@
 title: "Fonksiyonlar"
 date: Jan 09, 2017 15:35
 published: true
+tags: fn
+cover: introducing-elixir-cover.png
 author:
   name: Ender Ahmet Yurt
   email: enderyurt@gmail.com
@@ -12,7 +14,12 @@ author:
 
 Merhaba.
 
-Elixir, fonksiyonel bir programla dili olduğu için giriş kısmından sonra fonksiyonları anlamak daha iyi olur diye düşünüyorum. Dilin temel özelliklerine zaten konular detaylandıkça tek tek değinme fırsatımız olacak. Ben Elixir öğrenmeye kitap olarak O'Reilly'ın Introducing Elixir kitabı ile başladım ve içerik olarak o kitabı izleyeceğim.
+Elixir, fonksiyonel bir programla dili olduğu için giriş kısmından sonra 
+fonksiyonları anlamak daha iyi olur diye düşünüyorum. Dilin temel özelliklerine 
+zaten konular detaylandıkça tek tek değinme fırsatımız olacak.READ_MORE
+
+Ben Elixir öğrenmeye kitap olarak O’Reilly’nin [Introducing Elixir](http://shop.oreilly.com/product/0636920050612.do) 
+kitabı ile başladım ve içerik olarak o kitabı izleyeceğim.
 
 ###FN
 

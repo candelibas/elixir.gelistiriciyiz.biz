@@ -1,6 +1,8 @@
 ---
 title: "Kurulum ve İlk Program"
 date: Jan 05, 2017 00:14
+tags: setup,iex
+cover: introducing-elixir-cover.png
 published: true
 author:
   name: Ender Ahmet Yurt
@@ -12,7 +14,9 @@ author:
 
 Merhaba.
 
-Uzun bir Ruby macerasından sonra kendimi başka bir programlama diline atmak istiyordum. Aslında programla dilinden ziyade isteğim daha farklı bir disiplini barındıran bir dil olmasaydı. Daha önceden de merak edip baktığım ama aklım o günlerde pek çalışmadığı için anlayamadığım, sıkıldığım programlama dili **Elixir**'e bugünlerde tekrardan başladım. Bu site üzerinden sizle maceramı paylaşacağım. Umarım herkes için faydalı olur. Hadi yola koyulalım.
+Uzun bir Ruby macerasından sonra kendimi başka bir programlama diline atmak 
+istiyordum. Aslında programla dilinden ziyade isteğim daha farklı bir disiplini 
+barındıran bir dil olmasaydı. READ_MOREDaha önceden de merak edip baktığım ama aklım o günlerde pek çalışmadığı için anlayamadığım, sıkıldığım programlama dili **Elixir**'e bugünlerde tekrardan başladım. Bu site üzerinden sizle maceramı paylaşacağım. Umarım herkes için faydalı olur. Hadi yola koyulalım.
 
 ###Elixir
 
