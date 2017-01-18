@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Elixir Püf Noktaları</title>
+  <subtitle>Elixir programlama dili</subtitle>
+  <id>http://elixir.gelistiriciyiz.biz</id>
+  <link href="http://elixir.gelistiriciyiz.biz"/>
+  <link href="http://elixir.gelistiriciyiz.biz/feed.xml" rel="self"/>
+  <updated>2017-01-16T21:16:00+03:00</updated>
+  <author>
+    <name>Uğur Özyılmazel</name>
+  </author>
+  <entry>
+    <title>Modüller</title>
+    <link rel="alternate" href="http://elixir.gelistiriciyiz.biz/2017/01/16/moduller/"/>
+    <id>http://elixir.gelistiriciyiz.biz/2017/01/16/moduller/</id>
+    <published>2017-01-16T21:16:00+03:00</published>
+    <updated>2017-01-18T13:55:56+03:00</updated>
+    <author>
+      <name>Ender Ahmet Yurt</name>
+    </author>
+    <summary type="html">&lt;p&gt;Merhaba.&lt;/p&gt;
+
+&lt;p&gt;Elixir programlarını daha derli toplu yazmak ve çeşitli encapsulate işlerimlerini yapabilmek için modüllere ihtiyaç duyuyoruz. Modüller içerisinde fonksiyonlar tanımlayıp kullanabiliyor ayrıca modül içinde de modül tanımlayabiliyoruz.&lt;/p&gt;
+
+&lt;p&gt;Modüller &lt;code&gt;.ex&lt;/code&gt; dosyasının içinde tanımlanıyor ve aynı Ruby&amp;#39;de olduğu gibi isimleri snake case ile yazılıyor. Örnek verecek olursak &lt;code&gt;my_lovely_module.ex&lt;/code&gt;&lt;/p&gt;
+&lt;pre class="highlight elixir"&gt;&lt;code&gt;&lt;span class="k"&gt;defmodule&lt;/span&gt; &lt;span class="no"&gt;Drop&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;fall_velocity&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="ss"&gt;:math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="m"&gt;9.8&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;mps_to_mph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mps&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="m"&gt;2.23693629&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;mps&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="n"&gt;mps_to_kph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mps&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="m"&gt;3.6&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;mps&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Yukarıda görüldüğü gibi modül tanımına &lt;code&gt;defmodule&lt;/code&gt; ile başlayıp, modül ismimizi büyük harfle yazarak başlıyoruz. Bir önceki yazıda anlattığımız anonim fonksiyonlar gibi burada metotları bir değere atamak zorunda değiliz. &lt;code&gt;def do ... end&lt;/code&gt; arasına metotumuzun yapacağı işi yazıyoruz. &lt;code&gt;defp&lt;/code&gt; ile private metot tanımlayabiliriz.&lt;/p&gt;
+
+&lt;p&gt;Şimdi gelelim modülü yazdığımız Elixir kodunu compile etmeye ve sonrasında kullanmaya. Önce &lt;code&gt;iex&lt;/code&gt; ile bir Elixir shell açıyoruz ve &lt;code&gt;c&lt;/code&gt; fonksiyonun içine modülümüzün adını yazıyoruz.&lt;/p&gt;
+&lt;pre class="highlight elixir"&gt;&lt;code&gt;&lt;span class="n"&gt;iex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sd"&gt;"&lt;/span&gt;&lt;span class="s2"&gt;drop.ex"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="no"&gt;Drop&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;iex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Modülün olduğu klasörü içine bakacak olursak bir adet `&lt;code&gt;Elixir.Drop.beam&lt;/code&gt; adında bir compile edilmiş bir dosya görürüz. Bu dosya oluştuğuna göre artık modül içinde tanımladığım metotları kullanabiliriz.&lt;/p&gt;
+&lt;pre class="highlight elixir"&gt;&lt;code&gt;&lt;span class="n"&gt;iex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="no"&gt;Drop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fall_velocity&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="m"&gt;19.79898987322333&lt;/span&gt;
+&lt;span class="n"&gt;iex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="no"&gt;Drop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mps_to_mph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;Drop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fall_velocity&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;20&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="m"&gt;44.289078952755766&lt;/span&gt;
+&lt;span class="n"&gt;iex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Elixir shell&amp;#39;e çıkıp, girsek bile tekrar tekrar compile edilmiş kodu kullanabiliriz. Bunun yanında her değişiklik yaptığımızda kodu tekrar compile edip, çalıştırmalıyız. Ancak bütün bunları yapmak istemiyorsak Elixir&amp;#39;in scripting versiyonu olan &lt;code&gt;.exs&lt;/code&gt; de aynı şekilde kullanabiliriz.&lt;/p&gt;
+
+&lt;p&gt;Modülleri bu şekilde öğrenmiş olduk. Modülleri birbilerini içinde çağırabilir ve kullanabiliriz. Bu konuyu bir sonraki yazıda daha detaylı işleyeceğiz.&lt;/p&gt;
+
+&lt;p&gt;Sevgiler.&lt;/p&gt;
+</summary>
+  </entry>
+  <entry>
+    <title>Fonksiyonlar</title>
+    <link rel="alternate" href="http://elixir.gelistiriciyiz.biz/2017/01/09/fonksiyonlar/"/>
+    <id>http://elixir.gelistiriciyiz.biz/2017/01/09/fonksiyonlar/</id>
+    <published>2017-01-09T15:35:00+03:00</published>
+    <updated>2017-01-11T12:31:48+03:00</updated>
+    <author>
+      <name>Ender Ahmet Yurt</name>
+    </author>
+    <summary type="html">&lt;p&gt;Merhaba.&lt;/p&gt;
+
+&lt;p&gt;Elixir, fonksiyonel bir programla dili olduğu için giriş kısmından sonra 
+fonksiyonları anlamak daha iyi olur diye düşünüyorum. Dilin temel özelliklerine 
+zaten konular detaylandıkça tek tek değinme fırsatımız olacak.&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Kurulum ve İlk Program</title>
+    <link rel="alternate" href="http://elixir.gelistiriciyiz.biz/2017/01/05/kurulum-ve-ilk-program/"/>
+    <id>http://elixir.gelistiriciyiz.biz/2017/01/05/kurulum-ve-ilk-program/</id>
+    <published>2017-01-05T00:14:00+03:00</published>
+    <updated>2017-01-11T12:31:56+03:00</updated>
+    <author>
+      <name>Ender Ahmet Yurt</name>
+    </author>
+    <summary type="html">&lt;p&gt;Merhaba.&lt;/p&gt;
+
+&lt;p&gt;Uzun bir Ruby macerasından sonra kendimi başka bir programlama diline atmak 
+istiyordum. Aslında programla dilinden ziyade isteğim daha farklı bir disiplini 
+barındıran bir dil olmasaydı. &lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Merhaba dünya!</title>
+    <link rel="alternate" href="http://elixir.gelistiriciyiz.biz/2017/01/04/merhaba-dunya/"/>
+    <id>http://elixir.gelistiriciyiz.biz/2017/01/04/merhaba-dunya/</id>
+    <published>2017-01-04T12:42:00+03:00</published>
+    <updated>2017-01-04T13:03:45+03:00</updated>
+    <author>
+      <name>Uğur Özyılmazel</name>
+    </author>
+    <summary type="html">&lt;p&gt;Son dönemin heyecan verici programlama dillerinden &lt;a href="elixir-lang.org"&gt;Elixir&lt;/a&gt; 
+ile ilgili ipuçları, püf noktarı artık &lt;a href="http://geliştiriciyiz.biz"&gt;geliştiriciyiz.biz&lt;/a&gt; 
+ağında! Geçtiğimiz günlerde sevgili &lt;a href="http://enderahmetyurt.com/"&gt;Ender Ahmet Yurt&lt;/a&gt;’un önerisiyle (&lt;em&gt;ki ağırlıklı
+olarak kendisi bu siteyi besleyecek&lt;/em&gt;) bugün yayına geçtik!&lt;/p&gt;
+
+&lt;p&gt;Hepimiz heyecanla bekliyoruz!&lt;/p&gt;
+</summary>
+  </entry>
+</feed>
