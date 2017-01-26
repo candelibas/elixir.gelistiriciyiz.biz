@@ -81,7 +81,7 @@ iex(6)> convert_fah_to_cel.(100)
 ```elixir
 iex(7)> sum = &(&1+&2)
 &:erlang.+/2
-iex(8)> sum.(5)
+iex(8)> sum.(5, 3)
 8
 ```
 
